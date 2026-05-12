@@ -8,38 +8,98 @@
     <script src="https://kit.fontawesome.com/adc9d4d85c.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <header class="flex-header">
-
+   <header class="flex-header">
         <div>
-            <img class="logo" src="../../public/images/Logo.png" alt="Logo BioImpact">
+            <img class="logo" src="../../public/images/Logo-con-fondo.jpg" alt="Logo BioImpact">
         </div>
         
-        
-        <nav class="flex-nav" >
-            <ul class="flex-ul">
-                <li><a href="" class="a-class">EcoEscuelas</a></li>
-                <li><a href="" class="a-class">PlantAr</a></li>
-                <li><a href="" class="a-class">Cero Reciduos</a></li>
-                <li><a href="" class="a-class">Guardianes Del Agua</a></li>
-            </ul>
-
+        <nav class="flex-nav">
             <div class="search-container">
                 <input type="text" placeholder="Buscar proyectos..." class="search-input">
-                <button type="submit" class="search-btn">
-                    Buscar
-                </button>
+                <button type="submit" class="search-btn">Buscar</button>
             </div>
-
+            <ul class="flex-ul">
+                <li><a href="ecoEscuelas.html" class="a-class">EcoEscuelas</a></li>
+                <li><a href="plantAr.html" class="a-class">PlantAr</a></li>
+                <li><a href="ceroReciduos.html" class="a-class">Cero Reciduos</a></li>
+                <li><a href="guardianesDelAgua.html" class="a-class">Guardianes Del Agua</a></li>
+            </ul>
         </nav>
 
-        <div>
+        <div class="header-right">
             <a href="" class="donation-button">Doná Ahora</a>
-            <i class="fa-solid fa-arrow-right-from-bracket login"></i>
+            <a href=""><i class="fa-solid fa-user fa-xl login" style="color: white;"></i></a>
         </div>
+    </header>
 
+    <main>
+        <section class="carrusel-seccion">
+            <button class="flecha prev" onclick="document.querySelector('.carrusel-track').scrollBy({left: -window.innerWidth, behavior: 'smooth'})">&#10094;</button>
+
+            <div class="carrusel-container">
+                <div class="carrusel-track">
+                    <article class="noticia-card" style="background-image: url('../../public/images/Noticia-1.jpg');">
+                        <div class="overlay"></div> 
+                        <div class="info-noticia"> 
+                            <h3>Gran avance en reforestación</h3>
+                            <p>Se plantaron más de 10,000 árboles este mes...</p>
+                            <a href="#" class="btn-accion">Saber más</a>
+                        </div>
+                    </article>
+                    <article class="noticia-card" style="background-image: url('noticia2.jpg');">
+                        <div class="overlay"></div>
+                        <div class="info-noticia">
+                            <h3>Energías Limpias</h3>
+                            <p>Nuevos paneles solares en EcoEscuelas...</p>
+                            <a href="#" class="btn-accion">Saber más</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+            <button class="flecha next" onclick="document.querySelector('.carrusel-track').scrollBy({left: window.innerWidth, behavior: 'smooth'})">&#10095;</button>
+        </section>
+        <section>
+            
+            <a href="">Se voluntario</a>
+            <h2>Mision</h2>
+
+
+
+        </section>
+        <section>
+            <h3>Clima y Energia</h3>
+
+            <article>
+
+
+
+
+
+            </article>
+            <article>
+
+
+
+
+
+            </article>
+            <article>
+
+
+
+
+
+            </article>
+        </section>
+
+
+
+    </main>
+
+    <footer>
         
 
-    </header>
+    </footer>
 
 </body>
 </html>

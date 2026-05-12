@@ -1,101 +1,168 @@
-header {
-    background-color: #E2D372;
-    padding: 10px 20px; 
+/* Reseteo para evitar bordes blancos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-
-.logo {
-    width: 270px; 
-}
-
+/* Header Flotante */
 .flex-header {
     display: flex; 
     justify-content: space-between; 
+    align-items: center;
+    position: absolute; /* Clave: flota sobre el contenido */
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.5), transparent); /* Sombra para legibilidad */
+    padding: 20px 50px;
+}
+
+.logo { 
+    width: 200px; 
+    filter: drop-shadow(0px 0px 15px rgba(21, 136, 62, 0.8));
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+.logo:hover{
+    filter: drop-shadow(0px 0px 25px rgba(21, 136, 62, 1));
+    transform: scale(1.05)
+}
+
+.flex-nav {
+    display: flex;
+    flex-direction: column; /* Buscador arriba, links abajo */
     align-items: center;
 }
 
 .flex-ul {
     display: flex;
     list-style: none; 
-    gap: 40px
-}
-
-.flex-nav{
-    display: flex;
-    flex-direction: column-reverse;
-    align-items: center
-}
-
-li {
-    margin: 0 15px 15px; 
-
+    gap: 20px;
 }
 
 .a-class {
     text-decoration: none;
-    color: #4B3621; 
-    white-space: nowrap; 
+    color: white; 
+    font-weight: bold;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
 }
 
-
+/* Buscador Ajustado */
 .search-container {
     display: flex;
-    max-width: 400px; 
+    max-width: 350px; 
     border-radius: 25px;
     overflow: hidden; 
     background-color: white;
-    margin-bottom: 50px;
-    margin-top: 110px;
+    margin-bottom: 15px; /* Espacio reducido */
 }
 
-.search-input {
+.search-input { 
     border: none;
-    padding: 10px 20px;
+    padding: 8px 15px;
+    outline: none;
     flex-grow: 1; 
-    outline: none; 
-    font-size: 14px;
 }
 
-.search-btn {
-    background-color: #5d4037; 
+.search-btn { 
+    background-color: #5d4037;
     color: white;
     border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    transition: background 0.3s ease;
+    padding: 0 15px;
+    cursor: pointer; 
+}
+
+/* Carrusel Pantalla Completa */
+.carrusel-seccion {
+    height: 90vh; /* 100% del alto de la ventana */
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.carrusel-container, .carrusel-track {
+    height: 100%;
+}
+
+.carrusel-track {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+}
+
+.carrusel-track::-webkit-scrollbar { display: none; }
+
+.noticia-card {
+    flex: 0 0 100vw; /* Cada noticia ocupa todo el ancho */
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    align-items: center; /* Texto centrado verticalmente */
+    padding-left: 10%;
+    scroll-snap-align: start;
+}
+
+.overlay {
+    position: absolute;
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* Capa oscura para leer el texto */
+}
+
+.info-noticia {
+    position: relative;
+    color: white;
+    z-index: 10;
+    max-width: 600px;
+}
+
+.info-noticia h3 { font-size: 3rem; margin-bottom: 10px; }
+
+/* Botones y Flechas */
+.donation-button {
+    background-color: #15883e;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 25px;
+    text-decoration: none;
     font-weight: bold;
 }
 
-.search-btn:hover {
-    background-color: #3e2723; 
+.flecha {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    color: white;
+    font-size: 2.5rem;
+    padding: 15px;
+    cursor: pointer;
+    z-index: 100;
+    border-radius: 50%;
 }
 
-.donation-button{
-    
+.prev { 
+    left: 20px; 
+}
+.next { 
+    right: 20px; 
+}
+
+.btn-accion {
     display: inline-block;
-    font-size: 16px;
-    border-radius: 500px;
-    border: 1px solid transparent;
-    min-width: 100px;
-    text-align: center;
-    padding: 16px 14px 18px;
-    color: #fff;
-    background-color: #15883e;
-    text-decoration: none;   
-    transition: background 0.3s ease;    
-    font-weight: bold;        
+    background-color: #ffeb3b;
+    color: black;
+    padding: 12px 30px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-top: 15px;
 }
-
-.donation-button:hover {
-    background-color: #1f5321;
-}
-
-.login{
-    color: #15883e;
-    transition: color 0.3s ease;
-}
-
-.login:hover {
-    color: #1f5321;
-}
-
