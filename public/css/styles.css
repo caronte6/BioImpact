@@ -3,6 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
 }
 
 /* Header Flotante */
@@ -30,6 +31,7 @@
     transform: scale(1.05)
 }
 
+
 .flex-nav {
     display: flex;
     flex-direction: column; /* Buscador arriba, links abajo */
@@ -47,6 +49,13 @@
     color: white; 
     font-weight: bold;
     text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.a-class:hover{
+    transform: scale(1.1);
+    font-weight: bold;
 }
 
 /* Buscador Ajustado */
@@ -72,6 +81,13 @@
     border: none;
     padding: 0 15px;
     cursor: pointer; 
+    transition: background 0.3s ease;
+    font-weight: bold;
+
+}
+
+.search-btn:hover{
+    background-color: #3e2723; 
 }
 
 /* Carrusel Pantalla Completa */
@@ -133,6 +149,38 @@
     border-radius: 25px;
     text-decoration: none;
     font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.donation-button:hover{
+    background-color: #0c5426 ;
+}
+
+.login {
+    color: white;
+    /* Marcamos que sea un cuadrado */
+    width: 45px !important;
+    height: 45px;
+    
+    /* Centrar el icono dentro de ese cuadrado */
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    
+    /* El borde y la forma */
+    border: 2px solid transparent;
+    border-radius: 50%;
+    
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.login:hover {
+    color: #ffeb3b;
+    border: 2px solid #ffeb3b ;
+    border-radius: 50%;
+    transform: scale(1.1);
+    background-color: rgba(255, 255, 255, 0.1);
 }
 
 .flecha {
@@ -165,4 +213,9 @@
     font-weight: bold;
     border-radius: 5px;
     margin-top: 15px;
+    transition: background 0.3s ease;
+}
+
+.btn-accion:hover{
+    background-color: #cfba01;
 }

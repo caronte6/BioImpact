@@ -1,6 +1,9 @@
+*{
+    font-family: 'Monsterrat', sans-serif;
+}
+
 .header {
-    background-color: #E2D372;
-    padding: 10px 20px; 
+    background-color: #E2D372; 
 }
 
 
@@ -9,10 +12,26 @@
     margin-right: 300px; 
 }
 
+.container-logo{
+    width: 250px;
+}
+
 .flex-header {
-    display: flex; 
-    justify-content: flex-start; 
-    align-items: flex-end;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 10px 30px;
+    position: absolute;
+    z-index: 1000;
+    top: 0;
+    left: 0; 
+    right: 0;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
 }
 
 .flex-ul {
@@ -48,7 +67,7 @@ li {
     border-radius: 25px; 
     overflow: hidden; 
     background-color: white;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
 .search-input {
@@ -71,4 +90,35 @@ li {
 
 .search-btn:hover {
     background-color: #3e2723; 
+}
+
+.donation-button{
+    
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 500px;
+    border: 1px solid transparent;
+    min-width: 100px;
+    text-align: center;
+    padding: 16px 14px 18px;
+    color: #fff;
+    background-color: #15883e;
+    text-decoration: none;   
+    transition: background 0.3s ease;    
+    font-weight: bold;     
+    padding: 10px 20px;  
+    white-space: nowrap; 
+}
+
+.donation-button:hover {
+    background-color: #1f5321;
+}
+
+.login{
+    color: #15883e;
+    transition: color 0.3s ease;
+}
+
+.login:hover {
+    color: #1f5321;
 }
