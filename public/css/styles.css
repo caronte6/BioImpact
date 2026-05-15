@@ -235,6 +235,7 @@
     justify-content: space-around;
     padding: 50px;
     background-color: #E2D372;
+    align-items: flex-end
 }
 
 .box-grey{
