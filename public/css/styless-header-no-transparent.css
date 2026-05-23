@@ -1,3 +1,12 @@
+:root{
+    --colorPrimario: #15883e;
+    --colorSecundario: #5d4037;
+    --colorTerciario: #E2D372;
+
+    --colorHoverPrimario:#1f5321;
+    --colorHoverSecundario: #3e2723;
+}
+
 *{
     font-family: 'Monsterrat', sans-serif;
 }
@@ -7,7 +16,7 @@ main{
 }
 
 .header {
-    background-color: #E2D372; 
+    background-color: var(--colorTerciario); 
 }
 
 
@@ -55,7 +64,7 @@ li {
 
 .a-class {
     text-decoration: none;
-    color: #4B3621; 
+    color: var(--colorHoverSecundario); 
     white-space: nowrap; 
 }
 
@@ -78,7 +87,7 @@ li {
 }
 
 .search-btn {
-    background-color: #5d4037; 
+    background-color: var(--colorSecundario); 
     color: white;
     border: none;
     padding: 10px 20px;
@@ -88,7 +97,7 @@ li {
 }
 
 .search-btn:hover {
-    background-color: #3e2723; 
+    background-color: var(--colorHoverSecundario); 
 }
 
 .donation-button{
@@ -101,7 +110,7 @@ li {
     text-align: center;
     padding: 16px 14px 18px;
     color: #fff;
-    background-color: #15883e;
+    background-color: var(--colorPrimario);
     text-decoration: none;   
     transition: background 0.3s ease;    
     font-weight: bold;     
@@ -110,23 +119,23 @@ li {
 }
 
 .donation-button:hover {
-    background-color: #1f5321;
+    background-color: var(--colorHoverPrimario);
 }
 
 .login{
-    color: #15883e;
+    color: var(--colorPrimario);
     transition: color 0.3s ease;
 }
 
 .login:hover {
-    color: #1f5321;
+    color: var(--colorHoverPrimario);
 }
 
 .flex-footer{
     display: flex;
     justify-content: space-around;
     padding: 50px;
-    background-color: #E2D372;
+    background-color: var(--colorTerciario);
     align-items: flex-end
 }
 
