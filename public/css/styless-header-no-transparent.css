@@ -9,65 +9,73 @@
 
 *{
     font-family: 'Monsterrat', sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
 html{font-size: 3vw;}
-h1{
-    font-size: 0.9rem;
-}
-h2, h3, h4{
-    font-size: 0.7rem;
-}
-
-main{
-    font-size: 3em;
-    margin: 0rem 2.2rem 0rem 2.2rem;
-    
-}
 body{font-size: 0.2rem;}
-img.figureimg{
-    width: 23rem;
-    height: auto;
+header{
+    position: relative;
+    bottom: 0.41rem; right: 0.37rem;
+    font-size: 2.5em;
 }
 
-.header {
-    background-color: var(--colorTerciario); 
+main{font-size: 3em;
+    margin: 0rem 2.2rem 0rem 2.2rem; 
 }
-.formItems{
-    width: 8rem;
-    height: 1rem;
-    margin: 1rem;
-}
-form.formContainer{
+
+footer{font-size: 2.3em;}
+
+.cartaGrande{
     width: 16rem;
-    height: 16rem;
-    
     box-sizing: border-box;
     padding: 2.8rem ;
-    margin: 2rem 0rem 2rem 0rem;
+    margin: 2rem;
     
-    position: relative;
-    left: 5.3rem;
-    background-color: #535353;
+    border-radius: 0.4rem;
+    background-color: var(--colorTerciario);
 }
-.logo {
+
+.centrar{ position: relative;left: 4rem;}
+
+.container-logo{width: 250px;}
+
+
+img.figureimg{width: 23rem;height: auto;}
+
+.rectanguloHorizontal{
+    width: 100vw; padding: 0.4rem 1.1rem 0.5rem 1.1rem;
+    background-color: var(--colorTerciario); 
+}
+
+.FilaDeItemsCentrados{
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    flex-direction: row;
+}
+
+main >form.centrar.cartaGrande>input, 
+    main>form.centrar.cartaGrande>label{
+        width: 8rem;
+        height: 1rem;
+        margin: 0.5rem;
+        border-radius: 0.35rem;
+        font-size: 0.57rem;
+        color: #000;
+}
+
+header>div.container-logo>a>img {
     width: 12em;
     margin-right: 0.3em; 
 }
 
-.container-logo{
-    width: 250px;
-}
-
-.flex-header {
-    font-size: 2em;
+.ColumnaReversaDeItemsCentrados{
     display: flex;
-    justify-content: space-between; 
-    align-items: center; 
-    padding: 0.4rem 1.1rem;
-    width: 100vw;
-    position: relative;
-    bottom: 0.41rem; right: 0.37rem;
+    flex-direction: column-reverse;
+    padding: 30px;
+    align-items: center
 }
 
 .header-right {
@@ -84,15 +92,8 @@ form.formContainer{
     gap: 40px
 }
 
-.flex-nav{
-    display: flex;
-    flex-direction: column-reverse;
-    padding: 30px;
-    align-items: center
-}
-
 li {
-    margin: 0 15px 15px; 
+    margin: 0rem 0.4rem 0rem 0.4rem; 
 
 }
 
@@ -156,26 +157,24 @@ li {
     background-color: var(--colorHoverPrimario);
 }
 
-.login{
+header>div.header-right>a>i{
     color: var(--colorPrimario);
     transition: color 0.3s ease;
 }
 
-.login:hover {
+header>div.header-right>a>i:hover {
     color: var(--colorHoverPrimario);
-}
-
-.flex-footer{
-    font-size: 2.3em;
-    display: flex;
-    justify-content: space-around;
-    padding: 50px;
-    background-color: var(--colorTerciario);
-    align-items: flex-end
 }
 
 .box-grey{
     border-radius: 5px;
     padding: 15px 30px;
     background-color: grey;
+}
+
+h1{
+    font-size: 0.9rem;
+}
+h2, h3, h4{
+    font-size: 0.7rem;
 }
