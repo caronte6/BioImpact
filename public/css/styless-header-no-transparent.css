@@ -57,10 +57,12 @@ img.figureimg{width: 23rem;height: auto;}
 }
 
 main >form.centrar.cartaGrande>input, 
-    main>form.centrar.cartaGrande>label{
+main>form.centrar.cartaGrande>label,
+main>form.centrar.cartaGrande>select{
         width: 8rem;
         height: 1rem;
         margin: 0.5rem;
+        padding: 0rem 0.4rem 0rem 0.4rem;
         border-radius: 0.35rem;
         font-size: 0.57rem;
         color: #000;
