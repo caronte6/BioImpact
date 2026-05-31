@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang='es'>
+<head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <title>BioImpact</title>
+    <link rel='stylesheet' href='../../public/css/styless-header-no-transparent.css'>
+    <script src="https://kit.fontawesome.com/adc9d4d85c.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header class="FilaDeItemsCentrados rectanguloHorizontal">
+
+        <div class="container-logo">
+           <a href="../views/index.html">
+                <img src="../../public/images/Logo.png" alt="Logo BioImpact">
+            </a> 
+        </div>
+        
+        
+        <nav class="ColumnaReversaDeItemsCentrados" >
+            <ul class="flex-ul">
+                <li><a href="./ecoEscuelas.html" class="a-class">EcoEscuelas</a></li>
+                <li><a href="./plantAr.html" class="a-class">PlantAr</a></li>
+                <li><a href="./ceroReciduos.html" class="a-class">Cero Reciduos</a></li>
+                <li><a href="./guardianesDelAgua.html" class="a-class">Guardianes Del Agua</a></li>
+            </ul>
+            <form class="search-container" action="../">
+                <input type="text" placeholder="Buscar proyectos..." class="search-input">
+                <button type="submit" class="search-btn">
+                    Buscar
+                </button>
+            </form>
+        </nav>
+
+        <div class="header-right">
+            <a href="" class="donation-button">Doná Ahora</a>
+            <a href=""><i class="fa-solid fa-user fa-xl"></i></a>
+        </div>
+        
+
+    </header>
+    <main>
+        <form autocomplete="on" class="centrar cartaGrande" >
+            <h1>Candidato aspirante</h1>
+            
+            <label for="nombre">Nombre</label><br>
+            <input type="text" id="nombre" name="nombre"  
+            placeholder="carlos"><br>
+            
+            <label for="apellido">Apellido</label><br>
+            <input type="text" id="apellido" name="apellido"
+            placeholder="caballero"><br>
+            
+            <label for="dni">DNI</label>
+            <input type="number" id="dni" name="documento" max="99999999" required>
+            
+            <label for="contraseña">Contraseña</label>
+            <input type="password" id="contraseña" name="contraseña"
+                minlength="8"
+                pattern="^(?=.*[a-zA-Z])(?=.*[!@#$%^&*]).{8,}$"
+                title="Debe contener al menos 8 caracteres, incluyendo una letra y un símbolo especial." 
+                required>
+            
+            <label for="ciudad">Ciudad</label>
+            <input type="text" id="ciudad" name="ciudad" 
+            placeholder="Ramos">
+
+            <label for="provincia">Provincia</label>
+            <select id="provincia" name="provincia" required>
+                <option value="BuenosAires">Buenos Aires</option>
+                <option value="Catamarca">Catamarca</option>
+                <option value="Chaco">Chaco</option>
+                <option value="Chubut">Chubut</option>
+                <option value="Corrientes">Corrientes</option>
+                <option value="Cordoba">Córdoba</option>
+                <option value="EntreRios">Entre Ríos</option>
+                <option value="Formosa">Formosa</option>
+                <option value="LaPampa">La Pampa</option>
+                <option value="LaRioja">La Rioja</option>
+                <option value="Jujuy">Jujuy</option>
+                <option value="Neuquen">Neuquén</option>
+                <option value="Mendoza">Mendoza</option>
+                <option value="Misiones">Misiones</option>
+                <option value="RioNegro">Río Negro</option>
+                <option value="TierraDelFuego">Tierra del Fuego</option>
+                <option value="Tucuman">Tucumán</option>
+                <option value="SanJuan">San Juan</option>
+                <option value="SanLuis">San Luis</option>
+                <option value="SantaFe">Santa Fe</option>
+                <option value="Salta">Salta</option>
+                <option value="SantiagoDelEstero">Santiago del Estero</option>
+                <option value="SantaCruz">Santa Cruz</option>
+            </select>
+            
+            <label for="telfono">Telefono</label>
+            <input type="tel" id="telefono" name="telefono">
+
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" required
+                placeholder="miCorreo@gmail">
+
+            <input type="submit" value="Unirse">
+
+        </form>
+    </main>
+    <footer class="rectanguloHorizontal FilaDeItemsCentrados">
+       
+       <p><i> todos los derechos de autor de la
+        pagina esta todos reservados a BioImpact - 2018 </i> </p>
+       <div class="box-grey">
+           <a href="./contacto.html" class="a-class">Contactanos</a>
+       </div>
+       <div class="box-grey">
+           <a href=""><i class="fa-brands fa-instagram fa-lg" style="color: white;"></i></a>
+           <a href=""><i class="fa-brands fa-youtube fa-lg" style="color: white;"></i></a>
+           <a href=""><i class="fa-brands fa-x-twitter fa-lg" style="color: white;"></i></a>
+           <a href=""><i class="fa-brands fa-facebook fa-lg" style="color: white;"></i></a>
+       </div> 
+    
+        
+      
+    </footer>
+</body>
+
+
+</html>
