@@ -4,7 +4,7 @@
     <meta charset='utf-8'>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <title>BioImpact</title>
-    <link rel='stylesheet' href='../../public/css/styless-header-no-transparent.css'>
+    <link rel='stylesheet' href='../../public/css/styles.css'>
     <script src="https://kit.fontawesome.com/adc9d4d85c.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -41,15 +41,16 @@
     </header>
     <main>
         <form autocomplete="on" class="centrar cartaGrande" >
-            <h1>Candidato aspirante</h1>
+            <h1 class="h1-forms">Candidato aspirante</h1>
+            <br>
             
-            <label for="nombre">Nombre</label><br>
+            <label for="nombre">Nombre</label>
             <input type="text" id="nombre" name="nombre"  
-            placeholder="carlos"><br>
+            placeholder="Carlos">
             
-            <label for="apellido">Apellido</label><br>
+            <label for="apellido">Apellido</label>
             <input type="text" id="apellido" name="apellido"
-            placeholder="caballero"><br>
+            placeholder="Caballero">
             
             <label for="dni">DNI</label>
             <input type="number" id="dni" name="documento" max="99999999" required>
@@ -97,8 +98,8 @@
 
             <label for="email">Email</label>
             <input type="email" name="email" id="email" required
-                placeholder="miCorreo@gmail">
-
+                placeholder="miCorreo@gmail.com">
+            <br>
             <input type="submit" value="Unirse">
 
         </form>
