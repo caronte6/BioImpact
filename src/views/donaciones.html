@@ -40,35 +40,67 @@
 
     </header>
     <main>
-        <form autocomplete="on" class="form" >
-            <h1 class="h1-forms">Candidato aspirante</h1>
-            <br>
-            
-            <label for="nombre">Nombre</label>
-            <input type="text" id="nombre" name="nombre"  
-            placeholder="Carlos">
-            
-            <label for="apellido">Apellido</label>
-            <input type="text" id="apellido" name="apellido"
-            placeholder="Caballero">
-            
-            <label for="dni">DNI</label>
-            <input type="number" id="dni" name="documento" max="99999999" required>
-            
-            <label for="contraseña">Contraseña</label>
-            <input type="password" id="contraseña" name="contraseña"
-                minlength="8"
-                pattern="^(?=.*[a-zA-Z])(?=.*[!@#$%^&*]).{8,}$"
-                title="Debe contener al menos 8 caracteres, incluyendo una letra y un símbolo especial." 
-                required>
-            
-            <label for="ciudad">Ciudad</label>
-            <input type="text" id="ciudad" name="ciudad" 
-            placeholder="Ramos">
 
-            <label for="provincia">Provincia</label>
-            <select id="provincia" name="provincia" required>
-                <option value="BuenosAires">Buenos Aires</option>
+    <form class="form">
+
+        <h1 class="h1-forms">Colabora con tu donación</h1>
+        <h2>Selecciona un monto</h2>
+
+        <div class="montos">
+            <label>
+                <input type="radio" name="monto" value="75000">
+                 $75.000
+            </label>
+
+            <label>
+                <input type="radio" name="monto" value="100000">
+                $100.000
+            </label>
+
+            <label>
+                <input type="radio" name="monto" value="150000">
+                $150.000
+            </label>
+        </div>
+
+        <label for="otroMonto">Otro monto</label>
+        <input type="text" id="otroMonto" placeholder="$50.000">
+
+        <div class="fila">
+            <div class="campo">
+                <label for="nombre">Nombre</label>
+                <input type="text" id="nombre" placeholder="Juan">
+            </div>
+
+            <div class="campo">
+                <label for="apellido">Apellido</label>
+                <input type="text" id="apellido" placeholder="Caballero">
+            </div>
+        </div>
+    
+
+        <div class="fila">
+            <div class="campo">
+                <label for="dni">DNI</label>
+                <input type="number" id="dni">
+            </div>
+
+            <div class="campo">
+                <label for="email">Email</label>
+                <input type="email" id="email">
+            </div>
+        </div>
+
+        <div class="fila">
+            <div class="campo">
+                <label for="ciudad">Ciudad</label>
+                <input type="text" id="ciudad">
+            </div>
+
+            <div class="campo">
+                <label for="provincia">Provincia</label>
+                <select id="provincia">
+                    <option value="BuenosAires">Buenos Aires</option>
                 <option value="Catamarca">Catamarca</option>
                 <option value="Chaco">Chaco</option>
                 <option value="Chubut">Chubut</option>
@@ -91,19 +123,24 @@
                 <option value="Salta">Salta</option>
                 <option value="SantiagoDelEstero">Santiago del Estero</option>
                 <option value="SantaCruz">Santa Cruz</option>
-            </select>
-            
-            <label for="telfono">Telefono</label>
-            <input type="tel" id="telefono" name="telefono">
+                </select>
+            </div>
+        </div>
 
-            <label for="email">Email</label>
-            <input type="email" name="email" id="email" required
-                placeholder="miCorreo@gmail.com">
-            <br>
-            <input type="submit" value="Unirse" class="donation-button">
+        <div class="campo-completo">
+            <label for="telefono">Teléfono</label>
+            <input type="tel" id="telefono">
+        </div>
 
-        </form>
-    </main>
+        <div class="campo-completo">
+            <label for="email2">Email</label>
+            <input type="email" id="email2">
+        </div>
+
+        <input type="submit" value="Unirse" class="donation-button">
+
+</form>
+</main>
     <footer class="rectanguloHorizontal FilaDeItemsCentrados">
        
        <p><i> todos los derechos de autor de la

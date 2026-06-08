@@ -17,7 +17,7 @@ html{font-size: 3vw;}
 body{font-size: 0.15rem;}
 header{
     position: relative;
-    bottom: 0.41rem; right: 0.37rem;
+    bottom: 0.41rem; 
     font-size: 2.5em;
 }
 
@@ -27,20 +27,27 @@ main{font-size: 3em;
 
 footer{font-size: 2.3em;}
 
-.cartaGrande{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 16rem;
-    box-sizing: border-box;
-    padding: 2.8rem ;
-    margin: 2rem;
-    
-    border-radius: 0.4rem;
-    background-color: var(--colorTerciario);
+footer .a-class{
+    color: #fff;
 }
 
-.centrar{ position: relative;left: 4rem;}
+.a-class {
+    text-decoration: none;
+    color: var(--colorSecundario); 
+    font-weight: bold;
+    text-shadow: 1px 1px 3px var(--colorSecundario);
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.a-class:hover{
+    transform: scale(1.1);
+    font-weight: bold;
+}
+
+footer a{
+    color: #fff;
+}
 
 .container-logo{width: 250px;}
 
@@ -48,7 +55,9 @@ footer{font-size: 2.3em;}
 img.figureimg{width: 23rem;height: auto;}
 
 .rectanguloHorizontal{
-    width: 100vw; padding: 0.4rem 1.1rem 0.5rem 1.1rem;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0.4rem 1.1rem 0.5rem 1.1rem;
     background-color: var(--colorTerciario); 
 }
 
@@ -57,19 +66,6 @@ img.figureimg{width: 23rem;height: auto;}
     justify-content: space-between; 
     align-items: center; 
     flex-direction: row;
-}
-
-main >form.centrar.cartaGrande>input, 
-main>form.centrar.cartaGrande>label,
-main>form.centrar.cartaGrande>select{
-        max-height: 75%;
-        width: 8rem;
-        height: 1rem;
-        margin: 0.1rem;
-        padding: 0.1rem 0.1rem 0.1rem 0.1rem;
-        border-radius: 0.35rem;
-        font-size: 0.57rem;
-        color: #000;
 }
 
 header>div.container-logo>a>img {
@@ -100,13 +96,6 @@ header>div.container-logo>a>img {
 
 li {
     margin: 0rem 0.4rem 0rem 0.4rem; 
-
-}
-
-.a-class {
-    text-decoration: none;
-    color: var(--colorHoverSecundario); 
-    white-space: nowrap; 
 }
 
 
@@ -183,4 +172,76 @@ h1{
 }
 h2, h3, h4{
     font-size: 0.7rem;
+}
+
+.contenedor-section{
+    max-width: 1200px;
+    width: 90%;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.articulo{
+    background: --var(--colorTerciario);
+    padding: 2rem;
+    border-radius: 12px;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,.1);
+}
+
+.form{
+    width: 500px;
+    margin: 15px auto;
+    padding: 30px;
+    border: 1px solid #999;
+    border-radius: 15px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background-color: var(--colorTerciario);
+
+}
+
+.fila{
+    display: flex;
+    gap: 15px;
+}
+
+.campo{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.campo-completo{
+    display: flex;
+    flex-direction: column;
+}
+
+.montos{
+    display: flex;
+    justify-content: space-between;
+}
+
+input,
+select{
+    padding: 8px;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 50px;
+    border: 1px solid transparent;
+}
+
+input[type="submit"]{
+    width: 150px;
+    margin: 20px auto 0;
+}
+
+.h1-forms{
+    text-align: center;
+    margin-bottom: 20px;
+    border-radius: 50px;
+    background-color: var(--colorPrimario);
+    color: #fff;
 }
