@@ -6,33 +6,69 @@
     <title>BioImpact</title>
     <link rel='stylesheet' href='../../public/css/styles-index.css'>
     <script src="https://kit.fontawesome.com/adc9d4d85c.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
    <header class="flex-header">
-        <div>
-            <a href="../views/index.html">
-                <img class="logo" src="../../public/images/Logo-con-fondo.jpg" alt="Logo BioImpact">
+
+    <div>
+        <a href="../views/index.html">
+            <img class="logo" src="../../public/images/Logo-con-fondo.jpg" alt="Logo BioImpact">
+        </a>
+    </div>
+
+    <!-- Menú escritorio y tablet -->
+    <nav class="flex-nav d-none d-md-flex">
+        <form class="search-container">
+            <input type="text" placeholder="Buscar proyectos..." class="search-input">
+            <button type="submit" class="search-btn">Buscar</button>
+        </form>
+
+        <ul class="flex-ul">
+            <li><a href="./ecoEscuelas.html" class="a-class">EcoEscuelas</a></li>
+            <li><a href="./plantAr.html" class="a-class">PlantAr</a></li>
+            <li><a href="./ceroReciduos.html" class="a-class">Cero Reciduos</a></li>
+            <li><a href="./guardianesDelAgua.html" class="a-class">Guardianes Del Agua</a></li>
+        </ul>
+    </nav>
+
+    <!-- Botones escritorio y tablet -->
+    <div class="header-buttons d-none d-md-flex">
+        <a href="./donaciones.html" class="donation-button">Doná Ahora</a>
+        <a href="./login.html">
+            <i class="fa-solid fa-user fa-xl login"></i>
+        </a>
+    </div>
+
+    <!-- Botón hamburguesa -->
+    <button class="navbar-toggler hamburguesa d-md-none"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#menuMobile">
+        <i class="fa-solid fa-seedling"></i>
+    </button>
+
+    <!-- Menú celular -->
+    <div class="collapse mobile-menu d-md-none" id="menuMobile">
+
+        <ul class="flex-ul-mobile">
+            <li><a href="./ecoEscuelas.html" class="a-class">EcoEscuelas</a></li>
+            <li><a href="./plantAr.html" class="a-class">PlantAr</a></li>
+            <li><a href="./ceroReciduos.html" class="a-class">Cero Reciduos</a></li>
+            <li><a href="./guardianesDelAgua.html" class="a-class">Guardianes Del Agua</a></li>
+        </ul>
+
+        <div class="mobile-buttons">
+            <a href="./donaciones.html" class="donation-button">Doná Ahora</a>
+
+            <a href="./login.html">
+                <i class="fa-solid fa-user fa-xl login"></i>
             </a>
         </div>
-        
-        <nav class="flex-nav">
-            <form class="search-container">
-                <input type="text" placeholder="Buscar proyectos..." class="search-input">
-                <button type="submit" class="search-btn">Buscar</button>
-            </form>
-            <ul class="flex-ul">
-                <li><a href="./ecoEscuelas.html" class="a-class">EcoEscuelas</a></li>
-                <li><a href="./plantAr.html" class="a-class">PlantAr</a></li>
-                <li><a href="./ceroReciduos.html" class="a-class">Cero Reciduos</a></li>
-                <li><a href="./guardianesDelAgua.html" class="a-class">Guardianes Del Agua</a></li>
-            </ul>
-        </nav>
 
-        <div>
-            <a href="./donaciones.html" class="donation-button">Doná Ahora</a>
-            <a href="./login.html"><i class="fa-solid fa-user fa-xl login"></i></a>
-        </div>
-    </header>
+    </div>
+
+</header>
 
     <main>
         <section class="carrusel-seccion">
@@ -43,7 +79,7 @@
                     <article class="noticia-card" style="background-image: url('../../public/images/ecoEscuela.png');">
                         <div class="overlay"></div> 
                         <div class="info-noticia"> 
-                            <h3>Una de las ecoEscuelas públicas de Argentina</h3>
+                            <h3>EcoEscuelas públicas</h3>
                             <p>Las ecoEscuelas son instituciones educativas que promueven la conciencia ambiental y la sostenibilidad.</p>
                             <a href="./ecoEscuelas.html" class="btn-accion">Saber más</a>
                         </div>
@@ -108,6 +144,6 @@
          
        
     </footer>
-
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
