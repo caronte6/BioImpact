@@ -182,7 +182,7 @@ h2, h3, h4{
 }
 
 .articulo{
-    background: --var(--colorTerciario);
+    background: var(--colorTerciario);
     padding: 2rem;
     border-radius: 12px;
     margin-bottom: 2rem;
