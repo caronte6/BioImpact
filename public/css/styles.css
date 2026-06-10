@@ -27,7 +27,7 @@ main{font-size: 3em;
 
 footer{font-size: 2.3em;}
 
-footer a, footer .textoSombreado{
+footer .a-class{
     color: #fff;
 }
 
@@ -114,7 +114,7 @@ a.donation-button.transicionDeColor:hover{
 .container-logo{width: 250px;}
 
 
-img.figureimg{width: 23rem;height: auto;}
+img.figureimg{width: 23rem;height: auto; max-width: 100%;}
 
 .rectanguloHorizontal{
     width: 100%;
