@@ -27,7 +27,7 @@ main{font-size: 3em;
 
 footer{font-size: 2.3em;}
 
-footer .a-class{
+footer a, footer .textoSombreado{
     color: #fff;
 }
 
@@ -39,15 +39,77 @@ footer .a-class{
     display: inline-block;
     transition: transform 0.3s ease;
 }
-
 .a-class:hover{
     transform: scale(1.1);
     font-weight: bold;
 }
 
-footer a{
-    color: #fff;
+/*agregar a un elemento a de un div con box-grey*/
+.textoSombreado{
+    text-decoration: none;
+    color: var(--colorSecundario); 
+    font-weight: bold;
+    text-shadow: 1px 1px 3px var(--colorSecundario);
 }
+
+.transicionDeEscala:hover{
+    transition: transform 0.3s ease;
+    transform: scale(1.1);
+}
+   
+.transicionDeColor{
+    color: var(--colorPrimario);
+    transition: color 0.3s ease;
+}
+
+a.donation-button.transicionDeColor:hover{
+    background-color: var(--colorHoverPrimario);
+    transition: background 0.3s ease;
+}
+
+.contenidoBloqueIncrustado{ display: inline-block;}
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .container-logo{width: 250px;}
 
@@ -142,7 +204,7 @@ li {
     color: #fff;
     background-color: var(--colorPrimario);
     text-decoration: none;   
-    transition: background 0.3s ease;    
+    /*transition: background 0.3s ease;    */
     font-weight: bold;     
     padding: 10px 20px;  
     white-space: nowrap; 
