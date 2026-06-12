@@ -185,11 +185,11 @@
 .login {
     color: white;
     /* Marcamos que sea un cuadrado */
-    width: 45px !important;
+    width: 45px;
     height: 45px;
     
     /* Centrar el icono dentro de ese cuadrado */
-    display: inline-flex !important;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
     

@@ -171,7 +171,7 @@ h2, h3, h4{
     max-width: 1200px;
     width: 90%;
     margin: 0 auto;
-    padding: 2rem;
+    padding: 0;
 }
 
 .articulo{
@@ -237,4 +237,27 @@ main form input[type="submit"].cajaSuave{
     border-radius: 50px;
     background-color: var(--colorTerciario);
     color: var(--colorPrimario);
+}
+.btn-group {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  justify-content: center;
+  margin: 30px;
+}
+
+.button-main {
+  background-color: var(--colorHoverSecundario);
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 15px;
+}
+
+.btn-group .button-main:hover {
+  background-color: dodgerblue;
 }
