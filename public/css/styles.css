@@ -1,12 +1,12 @@
 :root{
-    --colorPrimario: #15883e;
-    --colorSecundario: #5d4037;
-    --colorTerciario: #E2D372;
-
+    --colorPrimario: #fff;
+    --colorSecundario: #E2D372  ;
+    --colorTerciario: #15883e;
+    --cuartoColor:  #5d4037;
+    
     --colorHoverPrimario:#1f5321;
     --colorHoverSecundario: #3e2723;
 }
-
 *{
     font-family: 'Monsterrat', sans-serif;
     margin: 0;
@@ -27,100 +27,54 @@ main{font-size: 3em;
 
 footer{font-size: 2.3em;}
 
-footer a, footer .textoSombreado{
-    color: #fff;
+footer a{
+    color: var(--colorPrimario);
 }
 
-.a-class {
-    text-decoration: none;
-    color: var(--colorSecundario); 
-    font-weight: bold;
-    text-shadow: 1px 1px 3px var(--colorSecundario);
-    display: inline-block;
-    transition: transform 0.3s ease;
-}
-.a-class:hover{
-    transform: scale(1.1);
-    font-weight: bold;
-}
-
-/*agregar a un elemento a de un div con box-grey*/
 .textoSombreado{
     text-decoration: none;
-    color: var(--colorSecundario); 
+    color: var(--cuartoColor); 
     font-weight: bold;
-    text-shadow: 1px 1px 3px var(--colorSecundario);
+    text-shadow: 1px 1px 3px var(--cuartoColor);
 }
 
 .transicionDeEscala:hover{
     transition: transform 0.3s ease;
     transform: scale(1.1);
 }
-   
-.transicionDeColor{
-    color: var(--colorPrimario);
-    transition: color 0.3s ease;
-}
 
-a.donation-button.transicionDeColor:hover{
+.contenidoBloque{ display: block;}
+
+.transicionOscuraDeColorTerciario:hover{
     background-color: var(--colorHoverPrimario);
     transition: background 0.3s ease;
 }
 
-.contenidoBloqueIncrustado{ display: inline-block;}
-   
+.textoNormal{
+    font-size: 1.4em;
+    text-align: center;
+    text-decoration: none; 
+    font-weight: bold;    
+    white-space: nowrap;     
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.cajaSuave{
+    padding: 10px 20px;  
+    border: 1px solid transparent;
+    border-radius: 500px;
+    background-color: var(--colorTerciario);
+    color: var(--colorPrimario);
+}
 
 .container-logo{width: 250px;}
 
-
-img.figureimg{width: 23rem;height: auto;}
+img.figureimg{width: 23rem;height: auto; max-width: 100%;}
 
 .rectanguloHorizontal{
     width: 100%;
     box-sizing: border-box;
     padding: 0.4rem 1.1rem 0.5rem 1.1rem;
-    background-color: var(--colorTerciario); 
+    background-color: var(--colorSecundario); 
 }
 
 .FilaDeItemsCentrados{
@@ -160,13 +114,12 @@ li {
     margin: 0rem 0.4rem 0rem 0.4rem; 
 }
 
-
 .search-container {
     display: flex;
     max-width: 400px; 
     border-radius: 25px; 
     overflow: hidden; 
-    background-color: white;
+    background-color: var(--colorPrimario);
     margin-bottom: 20px;
 }
 
@@ -179,7 +132,7 @@ li {
 }
 
 .search-btn {
-    background-color: var(--colorSecundario); 
+    background-color: var(--cuartoColor); 
     color: white;
     border: none;
     padding: 10px 20px;
@@ -192,34 +145,12 @@ li {
     background-color: var(--colorHoverSecundario); 
 }
 
-.donation-button{
-    
-    display: inline-block;
-    font-size: 16px;
-    border-radius: 500px;
-    border: 1px solid transparent;
-    min-width: 100px;
-    text-align: center;
-    padding: 16px 14px 18px;
-    color: #fff;
-    background-color: var(--colorPrimario);
-    text-decoration: none;   
-    /*transition: background 0.3s ease;    */
-    font-weight: bold;     
-    padding: 10px 20px;  
-    white-space: nowrap; 
-}
-
-.donation-button:hover {
-    background-color: var(--colorHoverPrimario);
-}
-
 header>div.header-right>a>i{
-    color: var(--colorPrimario);
-    transition: color 0.3s ease;
+    color: var(--colorTerciario);
 }
 
 header>div.header-right>a>i:hover {
+    transition: color 0.3s ease;
     color: var(--colorHoverPrimario);
 }
 
@@ -240,11 +171,11 @@ h2, h3, h4{
     max-width: 1200px;
     width: 90%;
     margin: 0 auto;
-    padding: 2rem;
+    padding: 0;
 }
 
 .articulo{
-    background: var(--colorTerciario);
+    background: var(--colorSecundario);
     padding: 2rem;
     border-radius: 12px;
     margin-bottom: 2rem;
@@ -261,7 +192,7 @@ h2, h3, h4{
     display: flex;
     flex-direction: column;
     gap: 15px;
-    background-color: var(--colorTerciario);
+    background-color: var(--colorSecundario);
 
 }
 
@@ -295,7 +226,7 @@ select{
     border: 1px solid transparent;
 }
 
-input[type="submit"]{
+main form input[type="submit"].cajaSuave{
     width: 150px;
     margin: 20px auto 0;
 }
@@ -304,6 +235,29 @@ input[type="submit"]{
     text-align: center;
     margin-bottom: 20px;
     border-radius: 50px;
-    background-color: var(--colorPrimario);
-    color: #fff;
+    background-color: var(--colorTerciario);
+    color: var(--colorPrimario);
+}
+.btn-group {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  justify-content: center;
+  margin: 30px;
+}
+
+.button-main {
+  background-color: var(--colorHoverSecundario);
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 15px;
+}
+
+.btn-group .button-main:hover {
+  background-color: dodgerblue;
 }

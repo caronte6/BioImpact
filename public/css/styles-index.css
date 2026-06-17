@@ -188,11 +188,11 @@ a{
 .login {
     color: white;
     /* Marcamos que sea un cuadrado */
-    width: 45px !important;
+    width: 45px;
     height: 45px;
     
     /* Centrar el icono dentro de ese cuadrado */
-    display: inline-flex !important;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
     
@@ -392,7 +392,7 @@ a{
 @media (max-width: 768px){
 
     .flex-header{
-        flex-direction: column;
+        flex-direction: row;
         position: absolute;
         flex-wrap: wrap;    
         top: 0;
@@ -490,7 +490,7 @@ a{
     }
 
     .logo{
-        width:120px;
+        width:180px;
     }
 
     .info-noticia h3{
@@ -517,5 +517,13 @@ a{
     .donation-button{
         width:80%;
         text-align:center;
+    }
+
+    #mobileSearch{
+        width:100%;
+        margin-top:10px;
+        border-radius:50px;
+        box-sizing:border-box;
+        background-color: rgba(255, 255, 255, 0.9);
     }
 }

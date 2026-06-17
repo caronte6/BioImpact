@@ -11,10 +11,37 @@
 <body>
    <header class="flex-header">
 
+    <!-- Botón hamburguesa -->
+    <button class="navbar-toggler hamburguesa d-md-none"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#menuMobile">
+        <i class="fa-solid fa-seedling fa-2x" style="color: white;"></i>
+    </button>
+
     <div>
         <a href="../views/index.html">
             <img class="logo-index" src="../../public/images/Logo-con-fondo.jpg" alt="Logo BioImpact">
         </a>
+    </div>
+
+    <button
+        class="d-md-none btn p-0 border-0 bg-transparent"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#mobileSearch">
+        <i class="fa-solid fa-magnifying-glass fa-2x" style="color: white;"></i>
+    </button>
+
+    <!-- Buscador mobile -->
+
+    <div class="collapse d-md-none" id="mobileSearch">
+        <form class="p-2">
+            <input
+                type="text"
+                class="form-control"
+                placeholder="Buscar proyectos...">
+        </form>
     </div>
 
     <!-- Menú escritorio y tablet -->
@@ -39,14 +66,6 @@
             <i class="fa-solid fa-user fa-xl login"></i>
         </a>
     </div>
-
-    <!-- Botón hamburguesa -->
-    <button class="navbar-toggler hamburguesa d-md-none"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#menuMobile">
-        <i class="fa-solid fa-seedling"></i>
-    </button>
 
     <!-- Menú celular -->
     <div class="collapse mobile-menu d-md-none" id="menuMobile">
