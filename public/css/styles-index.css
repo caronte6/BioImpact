@@ -7,6 +7,9 @@
     text-decoration: none;
 }
 
+a{
+    text-decoration: none;
+}
 
 /* Header Flotante */
 .flex-header {
