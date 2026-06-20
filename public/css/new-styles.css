@@ -1,12 +1,18 @@
 /* VARIABLES */
 
 :root{
-    --colorPrimario: #15883e;
-    --colorSecundario: #5d4037;
-    --colorTerciario: #E2D372;
+    --colorPrimario: #fff;
+    --colorSecundario: #E2D372  ;
+    --colorTerciario: #15883e;
+    --cuartoColor:  #5d4037;
+    
+
+    --colorOpuestoDePrimario:#000;
+
 
     --colorHoverPrimario:#1f5321;
-    --colorHoverSecundario:#3e2723;
+    --colorHoverSecundario: #3e2723;
+    --colorHoverTerciario:dodgerblue;
 }
 
 /* RESET */
@@ -57,7 +63,7 @@ footer .a-class{
 h1{
     font-size:clamp(2rem, 4vw, 3rem);
     margin-bottom:1rem;
-    color:var(--colorSecundario);
+    color:var(--cuartoColor);
 }
 
 h2{
@@ -75,26 +81,38 @@ label{
     font-size:clamp(1rem, 1.5vw, 1.2rem);
     line-height:1.6;
 }
-
-/* CLASES GENERALES */
-
 .a-class{
     color:var(--colorSecundario);
-    font-weight:bold;
     text-shadow:1px 1px 3px var(--colorSecundario);
     display:inline-block;
     transition:transform .3s ease;
 }
 
 .a-class:hover{
-    transform:scale(1.1);
+    transform:scale(1.1);}
+/* CLASES GENERALES */
+
+.transicionDeEscala:hover{
+    transition: transform 0.3s ease;
+    transform: scale(1.1);
+}
+.transicionOscuraDeColorTerciario:hover{
+    background-color: var(--colorHoverPrimario);
+    transition: background 0.3s ease;
 }
 
-.textoSombreado{
-    color:var(--colorSecundario);
+.textoMarronSombreado{
+    color:var(--cuartoColor);
     font-weight:bold;
-    text-shadow:1px 1px 3px var(--colorSecundario);
+    text-shadow:1px 1px 3px var(--cuartoColor);
 }
+.textoBlancoSombreado{
+    color:var(--colorPrimario);
+    font-weight:bold;
+    text-shadow:1px 1px 3px var(--colorDetexto1);
+}
+
+.contenidoBloque{ display: block;}
 
 .container-logo{
     width:250px;
@@ -121,7 +139,7 @@ label{
 .rectanguloHorizontal{
     width:100%;
     padding:.4rem 1.1rem .5rem 1.1rem;
-    background-color:var(--colorTerciario);
+    background-color:var(--colorSecundario);
 }
 
 .FilaDeItemsCentrados{
@@ -153,7 +171,7 @@ label{
     max-width:400px;
     border-radius:25px;
     overflow:hidden;
-    background:white;
+    background:var(--colorPrimario);
     margin-bottom:20px;
 }
 
@@ -165,8 +183,8 @@ label{
 }
 
 .search-btn{
-    background:var(--colorSecundario);
-    color:white;
+    background:var(--cuartoColor);
+    color:var(--colorPrimario);
     border:none;
     padding:10px 20px;
     cursor:pointer;
@@ -182,8 +200,8 @@ label{
 
 .donation-button{
     display:inline-block;
-    background:var(--colorPrimario);
-    color:white;
+    background:var(--colorTerciario);
+    color:var(--colorPrimario);
     border-radius:25px;
     padding:12px 25px;
     font-weight:bold;
@@ -196,7 +214,7 @@ label{
 }
 
 .login{
-    color:var(--colorPrimario);
+    color:var(--colorTerciario);
     transition:.3s;
 }
 
@@ -213,7 +231,7 @@ label{
 }
 
 .articulo{
-    background:var(--colorTerciario);
+    background:var(--colorHoverSecundario);
     padding:2rem;
     border-radius:12px;
     margin-bottom:2rem;
@@ -232,7 +250,7 @@ label{
     display:flex;
     flex-direction:column;
     gap:15px;
-    background:var(--colorTerciario);
+    background:var(--colorSecundario);
 }
 
 .fila{
@@ -274,8 +292,8 @@ input[type="submit"]{
     text-align:center;
     margin-bottom:20px;
     border-radius:50px;
-    background:var(--colorPrimario);
-    color:white;
+    background:var(--colorTerciario);
+    color:var(--colorPrimario);
 } 
 
 /* INDEX - HEADER FLOTANTE */
@@ -341,7 +359,7 @@ input[type="submit"]{
 }
 
 .a-class-index{
-    color:white;
+    color:var(--colorPrimario);
     text-shadow:1px 1px 3px rgba(0,0,0,.8);
 }
 
@@ -395,7 +413,7 @@ input[type="submit"]{
 .info-noticia{
     position:relative;
     z-index:10;
-    color:white;
+    color:var(--colorPrimario);
     max-width:600px;
 }
 
@@ -450,7 +468,7 @@ input[type="submit"]{
     justify-content:space-around;
     align-items:flex-end;
     padding:50px;
-    background-color:var(--colorTerciario);
+    background-color:var(--colorSecundario);
 }
 
 .flex-mision{
@@ -472,7 +490,7 @@ input[type="submit"]{
     width:250px;
     padding:12px 25px;
     border-radius:25px;
-    background:var(--colorPrimario);
+    background:var(--colorTerciario);
     color:white;
     font-weight:bold;
     transition:.3s;
