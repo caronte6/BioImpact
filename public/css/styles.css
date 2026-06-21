@@ -4,8 +4,14 @@
     --colorTerciario: #15883e;
     --cuartoColor:  #5d4037;
     
+
+    --colorOpuestoDePrimario:#000;
+
+
     --colorHoverPrimario:#1f5321;
     --colorHoverSecundario: #3e2723;
+    --colorHoverTerciario:dodgerblue;
+    
 }
 *{
     font-family: 'Monsterrat', sans-serif;
