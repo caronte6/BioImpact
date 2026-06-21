@@ -2,9 +2,10 @@
 
 :root{
     --colorPrimario: #fff;
-    --colorSecundario: #E2D372  ;
-    --colorTerciario: #15883e;
-    --cuartoColor:  #5d4037;
+    --colorSecundario: #ffeb3b;
+    --tercerColor: #E2D372  ;
+    --cuartoColor: #15883e;
+    --quintoColor:  #5d4037;
     
 
     --colorOpuestoDePrimario:#000;
@@ -13,6 +14,7 @@
     --colorHoverPrimario:#1f5321;
     --colorHoverSecundario: #3e2723;
     --colorHoverTerciario:dodgerblue;
+    --cuartoColorHover:#cfba01;
 }
 
 /* RESET */
@@ -52,18 +54,17 @@ main{
 
 footer{
     font-size:1em;
+    
 }
+footer a{color: var(--colorPrimario)} 
 
-footer .a-class{
-    color: white
-}
 
 /* RESPONSIVE */
 
 h1{
     font-size:clamp(2rem, 4vw, 3rem);
     margin-bottom:1rem;
-    color:var(--cuartoColor);
+    color:var(--quintoColor);
 }
 
 h2{
@@ -81,35 +82,30 @@ label{
     font-size:clamp(1rem, 1.5vw, 1.2rem);
     line-height:1.6;
 }
-.a-class{
-    color:var(--colorSecundario);
-    text-shadow:1px 1px 3px var(--colorSecundario);
-    display:inline-block;
-    transition:transform .3s ease;
-}
 
-.a-class:hover{
-    transform:scale(1.1);}
 /* CLASES GENERALES */
 
 .transicionDeEscala:hover{
     transition: transform 0.3s ease;
     transform: scale(1.1);
 }
-.transicionOscuraDeColorTerciario:hover{
-    background-color: var(--colorHoverPrimario);
-    transition: background 0.3s ease;
-}
 
 .textoMarronSombreado{
-    color:var(--cuartoColor);
+    color:var(--quintoColor);
     font-weight:bold;
-    text-shadow:1px 1px 3px var(--cuartoColor);
+    text-shadow:1px 1px 3px var(--quintoColor);
 }
 .textoBlancoSombreado{
     color:var(--colorPrimario);
     font-weight:bold;
     text-shadow:1px 1px 3px var(--colorDetexto1);
+}
+.textoNegrito{
+    font-size: 1.4em;
+    text-align: center;
+    text-decoration: none; 
+    font-weight: bold;    
+    white-space: nowrap;     
 }
 
 .contenidoBloque{ display: block;}
@@ -139,7 +135,7 @@ label{
 .rectanguloHorizontal{
     width:100%;
     padding:.4rem 1.1rem .5rem 1.1rem;
-    background-color:var(--colorSecundario);
+    background-color:var(--tercerColor);
 }
 
 .FilaDeItemsCentrados{
@@ -183,7 +179,7 @@ label{
 }
 
 .search-btn{
-    background:var(--cuartoColor);
+    background:var(--quintoColor);
     color:var(--colorPrimario);
     border:none;
     padding:10px 20px;
@@ -197,10 +193,22 @@ label{
 }
 
 /* BOTONES */
+.greenButton{
+    padding: 10px 20px;  
+    border: 1px solid transparent;
+    border-radius: 35px;
+    background-color: var(--cuartoColor);
+    color: var(--colorPrimario);
+}
+
+.greenButton :hover{
+    background-color: var(--colorHoverPrimario);
+    transition: background 0.3s ease;
+}
 
 .donation-button{
     display:inline-block;
-    background:var(--colorTerciario);
+    background:var(--cuartoColor);
     color:var(--colorPrimario);
     border-radius:25px;
     padding:12px 25px;
@@ -214,7 +222,7 @@ label{
 }
 
 .login{
-    color:var(--colorTerciario);
+    color:var(--cuartoColor);
     transition:.3s;
 }
 
@@ -250,7 +258,7 @@ label{
     display:flex;
     flex-direction:column;
     gap:15px;
-    background:var(--colorSecundario);
+    background:var(--tercerColor);
 }
 
 .fila{
@@ -292,7 +300,7 @@ input[type="submit"]{
     text-align:center;
     margin-bottom:20px;
     border-radius:50px;
-    background:var(--colorTerciario);
+    background:var(--cuartoColor);
     color:var(--colorPrimario);
 } 
 
@@ -422,10 +430,10 @@ input[type="submit"]{
     margin-bottom:10px;
 }
 
-.btn-accion{
+.yellowButton{
     display:inline-block;
     background:#ffeb3b;
-    color:black;
+    color:var(--colorOpuestoDePrimario);
     padding:12px 30px;
     border-radius:5px;
     margin-top:15px;
@@ -433,7 +441,7 @@ input[type="submit"]{
     transition:.3s;
 }
 
-.btn-accion:hover{
+.yellowButton :hover{
     background:#cfba01;
 } 
 
@@ -468,7 +476,7 @@ input[type="submit"]{
     justify-content:space-around;
     align-items:flex-end;
     padding:50px;
-    background-color:var(--colorSecundario);
+    background-color:var(--tercerColor);
 }
 
 .flex-mision{
@@ -484,21 +492,6 @@ input[type="submit"]{
     margin:20px 0;
 }
 
-.btn-voluntario{
-    display:flex;
-    justify-content:center;
-    width:250px;
-    padding:12px 25px;
-    border-radius:25px;
-    background:var(--colorTerciario);
-    color:white;
-    font-weight:bold;
-    transition:.3s;
-}
-
-.btn-voluntario:hover{
-    background:var(--colorHoverPrimario);
-}
 
 /* MENU HAMBURGUESA */
 
@@ -562,7 +555,7 @@ input[type="submit"]{
         min-width:90px;
     }
 
-    .a-class{
+    .textoNegrito{
         font-size:.9rem;
     }
 
@@ -620,7 +613,7 @@ MOBILE */
         width:100%;
         padding:15px;
     }
-
+    html{font-size: 6vw;}
     .hamburguesa{
         display:block;
     }
