@@ -6,40 +6,91 @@
     <title>BioImpact</title>
     <link rel='stylesheet' href='../../public/css/styles.css'>
     <script src="https://kit.fontawesome.com/adc9d4d85c.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
    <header class="FilaDeItemsCentrados rectanguloHorizontal">
+
+        <!-- Botón hamburguesa -->
+        <button class="navbar-toggler hamburguesa d-md-none"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#menuMobile">
+            <i class="fa-solid fa-seedling fa-2x" style="color: white;"></i>
+        </button>
 
         <div class="container-logo">
            <a href="../views/index.html">
                 <img class="logo" src="../../public/images/Logo.png" alt="Logo BioImpact">
             </a> 
         </div>
-        
-        
-        <nav class="ColumnaReversaDeItemsCentrados" >
-            <ul class="flex-ul">
-                <li><a href="#quienesSomos" class="textoSombreado contenidoBloque transicionDeEscala" target="_self">¿Quienes Somos?</a></li>
-                <li><a href="#ValoresYPrincipios" class="textoSombreado contenidoBloque transicionDeEscala" target="_self">Nuestros Valores</a></li>
-                <li><a href="#equipo" class="textoSombreado contenidoBloque transicionDeEscala" target="_self">Equipo De BioImpact</a></li>
-            </ul>
-            <form class="search-container">
-                <input type="text" placeholder="Buscar proyectos..." class="search-input">
-                <button type="submit" class="search-btn">
-                    Buscar
-                </button>
-            </form>
-        </nav>
 
-        <div class="header-right">
-            <a href="./donaciones.html" class="cajaSuave textoNormal transicionOscuraDeColorTerciario">Doná Ahora</a>
-            <a href="./login.html"><i class="fa-solid fa-user fa-xl"></i></a>
+        <button
+            class="d-md-none btn p-0 border-0 bg-transparent"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#mobileSearch">
+            <i class="fa-solid fa-magnifying-glass fa-2x" style="color: white;"></i>
+        </button>
+        
+        <!-- Buscador mobile -->
+
+        <div class="collapse d-md-none w-container" id="mobileSearch">
+            <form class="p-2">
+                <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Buscar proyectos...">
+            </form>
+        </div>
+
+        <!-- Menú escritorio y tablet -->
+
+        <nav class="flex-nav d-none d-md-flex">
+        <form class="search-container">
+            <input type="text" placeholder="Buscar proyectos..." class="search-input">
+            <button type="submit" class="search-btn">Buscar</button>
+        </form>
+
+        <ul class="flex-ul">
+            <li><a href="./ecoEscuelas.html" class="a-class">EcoEscuelas</a></li>
+            <li><a href="./plantAr.html" class="a-class">PlantAr</a></li>
+            <li><a href="./ceroReciduos.html" class="a-class">Cero Reciduos</a></li>
+            <li><a href="./guardianesDelAgua.html" class="a-class">Guardianes Del Agua</a></li>
+        </ul>
+    </nav>
+
+    <div class="header-buttons d-none d-md-flex">
+        <a href="./donaciones.html" class="donation-button">Doná Ahora</a>
+        <a href="./login.html">
+            <i class="fa-solid fa-user fa-xl login"></i>
+        </a>
+    </div>
+
+        <!-- Menú celular -->
+        <div class="collapse mobile-menu d-md-none" id="menuMobile">
+
+            <ul class="flex-ul-mobile">
+                <li><a href="./ecoEscuelas.html" class="a-class-index">EcoEscuelas</a></li>
+                <li><a href="./plantAr.html" class="a-class-index">PlantAr</a></li>
+                <li><a href="./ceroReciduos.html" class="a-class-index">Cero Reciduos</a></li>
+                <li><a href="./guardianesDelAgua.html" class="a-class-index">Guardianes Del Agua</a></li>
+            </ul>
+
+            <div class="mobile-buttons">
+                <a href="./donaciones.html" class="donation-button">Doná Ahora</a>
+
+                <a href="./login.html">
+                    <i class="fa-solid fa-user fa-xl login"></i>
+                </a>
+            </div>
+
         </div>
         
 
     </header>
 
-    <main>
+    <main class="contenedor-section">
         <h1>BioImpact: Transformando la Conciencia en Acción</h1>
         <br>
         <section class="articulo">
@@ -52,7 +103,7 @@
             climático, sino arquitectos de soluciones tangibles.</p>
             <figure>
                     <picture>
-                        <img src="./../../public/images/ladrilloDePlastico.jpeg" alt="un ladrillo de plastico">
+                        <img class="figureimg" src="./../../public/images/ladrilloDePlastico.jpeg" alt="un ladrillo de plastico">
                     </picture>
                     <figcaption>
                         ladrillo de plasctico ecologico.
@@ -86,7 +137,7 @@
                         fuente de información. científicos locales y vecinos <br>
                         para identificar las necesidades de medioambiental más urgentes.
                         </p>
-                        <figure><img src="./../../public/images/escuchaActiva.png" alt=""></figure>
+                        <figure><img class="figureimg" src="./../../public/images/escuchaActiva.png" alt=""></figure>
                         <br><br>
                     </li>
                     <li><p><strong> Responsabilidad Restaurativa </strong><br>
@@ -94,7 +145,7 @@
                         en un estado mejor del que los encontramos, aplicando <br>
                         ingeniería ambiental de vanguardia para sanar suelos,
                         cuencas y biodiversidad.
-                        </p> <figure><img src="./../../public/images/restaurar1.jpg" alt=""></figure>
+                        </p> <figure><img class="figureimg" src="./../../public/images/restaurar1.jpg" alt=""></figure>
                     <br><br>
                     </li>
                     <li><p><strong> Innovación Adaptativa</strong><br>
@@ -103,7 +154,7 @@
                         respetuosos con el equilibrio natural y económicamente 
                         sostenibles a largo plazo.
                         </p>
-                        <figure> <img src="./../../public/images/innovacion0.jpg" alt=""></figure>
+                        <figure> <img class="figureimg" src="./../../public/images/innovacion0.jpg" alt=""></figure>
                     </li>
                 </ol>
         </section>
@@ -127,7 +178,7 @@
         <p><i> todos los derechos de autor de la
          pagina esta todos reservados a BioImpact - 2018 </i> </p>
          
-        <div class="box-grey">
+        <div class="box-grey a-class">
             <a href="./contacto.html" class="textoNormal transicionDeEscala contenidoBloque">Contactanos</a>
         </div>
         <div class="box-grey">
@@ -140,6 +191,6 @@
          
        
     </footer>
-
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>    
