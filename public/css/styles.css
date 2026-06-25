@@ -151,7 +151,7 @@ label{
     display:flex;
     max-width:400px;
     border-radius:25px;
-    overflow:hidden;
+    overflow:visible;
     background:white;
     margin-bottom:20px;
 }
@@ -175,6 +175,36 @@ label{
 
 .search-btn:hover{
     background:var(--colorHoverSecundario);
+}
+
+.search-container,
+.search-container-mobile {
+    position: relative;
+}
+
+.search-suggestions {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: white;
+    border-radius: 0 0 8px 8px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+    z-index: 1000;
+    overflow: hidden;
+}
+
+.search-suggestion {
+    width: 100%;
+    padding: 10px 14px;
+    border: none;
+    background: white;
+    text-align: left;
+    cursor: pointer;
+}
+
+.search-suggestion:hover {
+    background: #e9f5ec;
 }
 
 /* BOTONES */
