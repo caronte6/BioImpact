@@ -16,7 +16,11 @@ const proyectos = [
     { titulo: "Cero Residuos", url: "./ceroResiduos.html", palabrasClave: ["cero residuos", "ceroreciduos", "residuos", "economia circular"] },
     { titulo: "Compostaje Organico", url: "./ceroResiduos.html#lineaDeAccion", palabrasClave: ["linea de accion", "lineadeaccion", "compostaje", "compostaje organico"] },
     { titulo: "Puntos de Reciclaje", url: "./ceroResiduos.html#puntosReciclaje", palabrasClave: ["puntos reciclaje", "puntos de reciclaje", "ecopuntos", "reciclaje"] },
-    { titulo: "Talleres de Upcycling", url: "./ceroResiduos.html#talleres", palabrasClave: ["talleres", "supra reciclaje", "supra-reciclaje", "upcycling"] }
+    { titulo: "Talleres de Upcycling", url: "./ceroResiduos.html#talleres", palabrasClave: ["talleres", "supra reciclaje", "supra-reciclaje", "upcycling"] },
+    { titulo: "Donaciones", url: "./donaciones.html", palabrasClave: ["donar", "donaciones", "aporte", "donation", "colaboracion", "ayuda"]},
+    { titulo: "Voluntariado", url: "./voluntario.html", palabrasClave: ["voluntariado", "voluntario", "unirse", "colaborar", "ayuda", "se parte"]},
+    { titulo: "Nosotros", url: "./nosotros.html", palabrasClave: ["conocenos", "nosotros", "mision", "quienes somos", "equipo", "historia"]},
+    { titulo: "Login", url: "./login.html", palabrasClave: ["login", "iniciar sesion", "acceder"]},   
 ];
 
 // Función para normalizar el texto eliminando acentos y caracteres especiales

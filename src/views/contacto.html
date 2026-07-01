@@ -33,23 +33,24 @@
             <i class="fa-solid fa-magnifying-glass fa-2x" style="color: white;"></i>
         </button>
         
-        <!-- Buscador mobile -->
+       <!-- Buscador mobile -->
 
-        <div class="collapse d-md-none w-container" id="mobileSearch">
-            <form class="p-2">
-                <input
-                    type="text"
-                    class="form-control"
-                    placeholder="Buscar proyectos...">
-            </form>
-        </div>
+    <div class="collapse d-md-none w-container" id="mobileSearch">
+        <form class="p-2 search-container-mobile">
+            <input
+                type="text"
+                class="form-control"
+                placeholder="Buscar proyectos...">
+            <div class="search-suggestions"></div>    
+        </form>
+    </div>
 
-        <!-- Menú escritorio y tablet -->
-
-        <nav class="flex-nav d-none d-md-flex">
+    <!-- Menú escritorio y tablet -->
+    <nav class="flex-nav d-none d-md-flex">
         <form class="search-container">
             <input type="text" placeholder="Buscar proyectos..." class="search-input">
             <button type="submit" class="search-btn">Buscar</button>
+            <div class="search-suggestions"></div>
         </form>
 
         <ul class="flex-ul">
@@ -137,5 +138,6 @@
        
     </footer>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../main.js"></script>
 </body>
 </html>    
