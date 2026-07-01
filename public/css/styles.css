@@ -91,6 +91,10 @@ label{
 
 .a-class:hover{
     transform:scale(1.1);
+} 
+
+footer .a-class{
+    color:var(--colorLetra);
 }
 
 .w-container{
