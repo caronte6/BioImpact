@@ -65,7 +65,7 @@ const mostrarErrorBusqueda = (input, mensaje) => {
     input.addEventListener("input", () => input.setCustomValidity(""), { once: true });
 };
 
-// Conecta el buscador del HTML con el JS. 
+
 
 document.querySelectorAll(".search-container, .search-container-mobile").forEach((formulario) => { //busca los formularios que contengan la clase "search-container" o el id "mobileSearch" y los recorre uno por uno.
 
@@ -117,7 +117,40 @@ document.querySelectorAll(".search-container, .search-container-mobile").forEach
         window.location.href = primerResultado.url;
     });
 });
+// Modo Oscuro
+
+const logo = document.getElementById("logo");
+const boton = document.getElementById("btn-alternar");
 
 
+const rutaLogoOscuro = "../../public/images/Logo-conFondo-dark.png";
+const rutaLogoClaro = "../../public/images/Logo-con-fondo.jpg";
 
 
+if (localStorage.getItem("tema") === "oscuro") {
+    document.body.classList.add("dark-mode");
+    boton.innerHTML = '<i class="fa-solid fa-sun"></i>';
+    
+    logo.src = rutaLogoOscuro; 
+} else {
+    boton.innerHTML = '<i class="fa-solid fa-moon"></i>';
+    
+    logo.src = rutaLogoClaro; 
+}
+
+
+boton.addEventListener("click", () => {
+    document.body.classList.toggle("dark-mode");
+
+    if (document.body.classList.contains("dark-mode")) {
+        boton.innerHTML = '<i class="fa-solid fa-sun"></i>';
+        localStorage.setItem("tema", "oscuro");
+        
+        logo.src = rutaLogoOscuro; 
+    } else {
+        boton.innerHTML = '<i class="fa-solid fa-moon"></i>';
+        localStorage.setItem("tema", "claro");
+        
+        logo.src = rutaLogoClaro; 
+    }
+});
