@@ -9,7 +9,7 @@
     --colorHoverSecundario:#3e2723;
     --colorHoverTerciario: #7C743E;
     --colorLetra: white;
-    --colorFondo: black
+    --colorFondo: black;
 }
 
 /* RESET */
@@ -111,6 +111,7 @@ footer .a-class{
 }
 
 .figureimg{
+    color:white;
     width:100%;
     max-width:600px;
     height:auto;
@@ -126,6 +127,7 @@ footer .a-class{
 .rectanguloHorizontal{
     width:100%;
     padding:.4rem 1.1rem .5rem 1.1rem;
+    color: var(--colorLetra);
     background-color:var(--colorTerciario);
 }
 
@@ -240,28 +242,30 @@ footer .a-class{
     color:var(--colorHoverPrimario);
 } 
 
-.btn-group{
-    display:flex;
-    justify-content:center;
-    gap:20px;
-    flex-wrap:wrap;
-    margin:30px 0;
+.btn-group {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin: 30px auto;
+    width: 100%;
 }
-.button-main{
-    background-color:var(--colorHoverSecundario);
-    border:none;
-    color:white;
-    padding:15px 32px;
-    text-align:center;
-    text-decoration:none;
-    font-size:16px;
-    cursor:pointer;
-    border-radius:15px;
-    min-width:220px;
+
+.button-main {
+    background-color: var(--colorHoverSecundario);
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 15px;
+    min-width: 220px;
 }
 *.dark-mode {
-    background-color: black; 
-    --colorLetra: black;
+    background-color: var(--colorLetra); 
+    --colorLetra: var(--colorFondo);
     --colorPrimario: var(--colorHoverPrimario); 
     --colorSecundario: var(--colorHoverSecundario);
     --colorTerciario: var(--colorHoverTerciario); 
@@ -286,10 +290,6 @@ footer .a-class{
     box-shadow: 0 0 5px rgba(0,0,0,0.3); 
 }
 
-body {
-    background-color: white;
-    color: black;
-}
 
 body.dark-mode {
     background-color: #121212;
@@ -313,6 +313,7 @@ body.dark-mode {
 }
 
 .articulo{
+    color: var(--colorLetra);
     background:var(--colorTerciario);
     padding:2rem;
     border-radius:12px;
@@ -691,6 +692,54 @@ input[type="submit"]{
         min-width:200px;
         font-size:15px;
     }
+    /* Modo oscuro Tablet */
+    *.dark-mode {
+    background-color: var(--colorLetra); 
+    --colorLetra: var(--colorFondo);
+    --colorPrimario: var(--colorHoverPrimario); 
+    --colorSecundario: var(--colorHoverSecundario);
+    --colorTerciario: var(--colorHoverTerciario); 
+    }
+
+
+    .btn-dark {
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+    margin-top:20px;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 50%; 
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease; 
+}
+
+    .btn-dark:hover {
+    background-color: white;
+    color: black;
+    box-shadow: 0 0 5px rgba(0,0,0,0.3); 
+    }
+
+
+    body.dark-mode {
+    background-color: #121212;
+    color: white;
+    }
+    .btn-dark.dark-mode{
+    background-color: black;
+    color: white;
+    }
+    .btn-dark.dark-mode:hover{
+    background-color: white;
+    color:black
+    }
 
     /* Header páginas internas */
 
@@ -917,5 +966,4 @@ MOBILE */
         padding:15px;
         font-size:0.75rem;
     }
-
 }
