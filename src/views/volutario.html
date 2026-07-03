@@ -101,11 +101,11 @@
             
             <label for="nombre">Nombre</label>
             <input type="text" id="nombre" name="nombre"  
-            placeholder="Carlos">
+            placeholder="Tu nombre">
             
             <label for="apellido">Apellido</label>
             <input type="text" id="apellido" name="apellido"
-            placeholder="Caballero">
+            placeholder="Tu apellido">
             
             <label for="dni">DNI</label>
             <input type="number" id="dni" name="documento" max="99999999" required>
@@ -115,11 +115,12 @@
                 minlength="8"
                 pattern="^(?=.*[a-zA-Z])(?=.*[!@#$%^&*]).{8,}$"
                 title="Debe contener al menos 8 caracteres, incluyendo una letra y un símbolo especial." 
-                required>
+                required
+                placeholder="Contraseña">
             
             <label for="ciudad">Ciudad</label>
             <input type="text" id="ciudad" name="ciudad" 
-            placeholder="Ramos">
+            placeholder="Ramos" >
 
             <label for="provincia">Provincia</label>
             <select id="provincia" name="provincia" required>
@@ -155,7 +156,7 @@
             <input type="email" name="email" id="email" required
                 placeholder="miCorreo@gmail.com">
             <br>
-            <input type="submit" value="Unirse" class="cajaSuave transicionOscuraDeColorTerciario">
+            <input type="submit" value="Unirse" class="btn-voluntario">
 
         </form>
     </main>
