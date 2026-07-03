@@ -180,6 +180,7 @@ footer .a-class{
     cursor:pointer;
     transition:.3s;
     font-weight:bold;
+    border-radius: 0px 0px 20px 20px;
 }
 
 .search-btn:hover{
