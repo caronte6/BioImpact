@@ -108,7 +108,10 @@
             placeholder="Tu apellido">
             
             <label for="dni">DNI</label>
-            <input type="number" id="dni" name="documento" max="99999999" required>
+            <input type="number" id="dni"
+             name="documento"
+             pattern="[0-9]{8}"
+            required>
             
             <label for="contraseña">Contraseña</label>
             <input type="password" id="contraseña" name="contraseña"
@@ -150,7 +153,9 @@
             </select>
             
             <label for="telfono">Telefono</label>
-            <input type="tel" id="telefono" name="telefono" placeholder="ej: 11 6486 8041" maxlength="10">
+            <input type="tel" id="telefono" name="telefono" 
+            pattern="[0-9]{10}"
+            placeholder="ej: 11 6486 8041">
 
             <label for="email">Email</label>
             <input type="email" name="email" id="email" required

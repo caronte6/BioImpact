@@ -137,7 +137,7 @@
         <div class="fila">
             <div class="campo">
                 <label for="dni">DNI</label>
-                <input type="number" id="dni" required>
+                <input type="number" id="dni" required  max="99999999" min="10000000">
             </div>
 
             <div class="campo">
@@ -184,7 +184,10 @@
 
         <div class="campo-completo">
             <label for="telefono">Teléfono</label>
-            <input type="tel" id="telefono" maxlength="10" placeholder="ej: 11 6478 1788">
+            <input type="tel"
+            id="telefono" 
+            pattern="[0-9]{10}"
+            placeholder="ej: 11 6478 1788" required>
         </div>
 
         <div class="campo-completo">
