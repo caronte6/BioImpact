@@ -137,7 +137,10 @@
         <div class="fila">
             <div class="campo">
                 <label for="dni">DNI</label>
-                <input type="number" id="dni" required  max="99999999" min="10000000">
+                <input type="number" id="dni"
+                pattern="[0-9]{8}" 
+                title="debe introducir su DNI sin puntos
+                required >
             </div>
 
             <div class="campo">
@@ -187,7 +190,9 @@
             <input type="tel"
             id="telefono" 
             pattern="[0-9]{10}"
-            placeholder="ej: 11 6478 1788" required>
+            placeholder="ej: 11 6478 1788" required
+            title=" solo debe ser el codigo de area ej 11
+            y luego el resto su numero ej: 1202-2606">
         </div>
 
         <div class="campo-completo">
