@@ -120,37 +120,40 @@ document.querySelectorAll(".search-container, .search-container-mobile").forEach
 // Modo Oscuro
 
 const logo = document.getElementById("logo");
-const boton = document.getElementById("btn-alternar");
+const botonesTema = document.querySelectorAll("#btn-alternar, #btn-alternar-mobile");
 
 
 const rutaLogoOscuro = "../../public/images/Logo-conFondo-dark.png";
 const rutaLogoClaro = "../../public/images/Logo-con-fondo.jpg";
 
 
+const actualizarBotonesTema = () => {
+    const esOscuro = document.body.classList.contains("dark-mode");
+
+    botonesTema.forEach((boton) => {
+        boton.innerHTML = esOscuro
+            ? '<i class="fa-solid fa-sun"></i>'
+            : '<i class="fa-solid fa-moon"></i>';
+    });
+
+    if (logo) {
+        logo.src = esOscuro ? rutaLogoOscuro : rutaLogoClaro;
+    }
+};
+
 if (localStorage.getItem("tema") === "oscuro") {
     document.body.classList.add("dark-mode");
-    boton.innerHTML = '<i class="fa-solid fa-sun"></i>';
-    
-    logo.src = rutaLogoOscuro; 
-} else {
-    boton.innerHTML = '<i class="fa-solid fa-moon"></i>';
-    
-    logo.src = rutaLogoClaro; 
 }
 
+actualizarBotonesTema();
 
-boton.addEventListener("click", () => {
-    document.body.classList.toggle("dark-mode");
+botonesTema.forEach((boton) => {
+    boton.addEventListener("click", () => {
+        document.body.classList.toggle("dark-mode");
 
-    if (document.body.classList.contains("dark-mode")) {
-        boton.innerHTML = '<i class="fa-solid fa-sun"></i>';
-        localStorage.setItem("tema", "oscuro");
-        
-        logo.src = rutaLogoOscuro; 
-    } else {
-        boton.innerHTML = '<i class="fa-solid fa-moon"></i>';
-        localStorage.setItem("tema", "claro");
-        
-        logo.src = rutaLogoClaro; 
-    }
+        const esOscuro = document.body.classList.contains("dark-mode");
+        localStorage.setItem("tema", esOscuro ? "oscuro" : "claro");
+
+        actualizarBotonesTema();
+    });
 });
