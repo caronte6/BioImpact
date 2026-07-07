@@ -153,7 +153,10 @@ footer .a-class{
     flex-wrap:wrap;
     justify-content:center;
 }
-
+td>p{
+    margin: 0px 0px 0px 20px;
+    
+}
 /* BUSCADOR */
 
 .search-container{
