@@ -30,9 +30,6 @@ const normalizarTexto = (texto) => {
         .toLowerCase()  // Convierte todo a minusculas
         .normalize("NFD") // Separa las letras de sus tildes.
         .replace(/[\u0300-\u036f]/g, "") // Elimina las tildes separadas
-        .replace(/[^a-z0-9\s]/g, " ") // Reemplaza simbolos y signos por espacios, dejando solo letras, numeros y espacios.
-        .replace(/\s+/g, " ")  // Si hay varios espacios seguidos, los convierte en uno solo.
-        .trim(); // Quita espacios al principio y al final del texto.
 };
 
 // Un proyecto coincide con el texto escrito por el usuario. Devuelve True o False.
