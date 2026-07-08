@@ -49,11 +49,20 @@ main{
 
 footer{
     font-size:1em;
-}
 
+}
+footer p{color: var(--colorFondo);}
 footer a{
     color: var(--colorLetra) ;
 }
+td>p{
+    margin: 0px 0px 0px 20px;  
+
+}
+td>img{
+        width: 33vw;
+    }
+
 
 /* RESPONSIVE */
 
@@ -153,7 +162,6 @@ footer .a-class{
     flex-wrap:wrap;
     justify-content:center;
 }
-
 /* BUSCADOR */
 
 .search-container{
@@ -314,7 +322,7 @@ body.dark-mode {
 }
 
 .articulo{
-    color: var(--colorLetra);
+    color: var(--colorFondo);
     background:var(--colorTerciario);
     padding:2rem;
     border-radius:12px;
@@ -967,4 +975,13 @@ MOBILE */
         padding:15px;
         font-size:0.75rem;
     }
+    td{
+        display: block;
+    }
+    td>img{
+        width: 30vh;
+    }
+    td>p{
+    margin: 20px 0px 0px 20px;  
+}
 }
