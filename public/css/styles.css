@@ -956,11 +956,6 @@ MOBILE */
         display:block;
         overflow-x:auto;
     }
-
-    main{
-        margin:0 1rem;
-    }
-
     .btn-group{
         flex-direction:column;
         gap:30px;
