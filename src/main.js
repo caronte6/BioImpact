@@ -36,7 +36,7 @@ const normalizarTexto = (texto) => {
 
 const coincideConBusqueda = (proyecto, textoBuscado) => {
     const titulo = normalizarTexto(proyecto.titulo);
-    const palabrasClave = proyecto.palabrasClave.map(normalizarTexto);
+    const palabrasClave = proyecto.palabrasClave.map(palabraClave => normalizarTexto(palabraClave));
 
     return titulo.includes(textoBuscado) // El titulo del proyecto contiene con lo que busco el usuario. Retorna True o False.
         // Lo que escribio el usuario contiene el titulo completo. Retorna True o False.
