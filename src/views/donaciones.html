@@ -129,12 +129,12 @@
         <div class="fila">
             <div class="campo">
                 <label for="nombre">Nombre</label>
-                <input type="text" id="nombre" placeholder="Juan">
+                <input type="text" id="nombre" placeholder="Tu nombre" required>
             </div>
 
             <div class="campo">
                 <label for="apellido">Apellido</label>
-                <input type="text" id="apellido" placeholder="Caballero">
+                <input type="text" id="apellido" placeholder="Tu apellido" required>
             </div>
         </div>
     
@@ -142,12 +142,15 @@
         <div class="fila">
             <div class="campo">
                 <label for="dni">DNI</label>
-                <input type="number" id="dni">
+                <input  id="dni"
+                pattern="[0-9]{8}" 
+                title="debe introducir su DNI sin puntos"
+                required >
             </div>
 
             <div class="campo">
                 <label for="email">Email</label>
-                <input type="email" id="email">
+                <input type="email" id="email" required>
             </div>
         </div>
 
@@ -189,21 +192,26 @@
 
         <div class="campo-completo">
             <label for="telefono">Teléfono</label>
-            <input type="tel" id="telefono">
+            <input type="tel"
+            id="telefono" 
+            pattern="[0-9]{10}"
+            placeholder="ej: 11 6478 1788" required
+            title=" solo debe ser el codigo de area ej 11
+            y luego el resto su numero ej: 1202-2606">
         </div>
 
         <div class="campo-completo">
             <label for="email2">Email</label>
-            <input type="email" id="email2">
+            <input type="email" id="email2" required>
         </div>
 
-        <input type="submit" value="Unirse" class="cajaSuave transicionOscuraDeColorTerciario">
+        <input type="submit" value="Unirse" class="btn-voluntario">
 
 </form>
 </main>
     <footer class="rectanguloHorizontal FilaDeItemsCentrados">
        
-       <p><i> todos los derechos de autor de la
+       <p class="a-class"><i> todos los derechos de autor de la
         pagina esta todos reservados a BioImpact - 2018 </i> </p>
        <div class="box-grey a-class">
            <a href="./contacto.html" class="textoNormal transicionDeEscala contenidoBloque">Contactanos</a>
